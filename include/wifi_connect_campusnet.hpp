@@ -14,7 +14,7 @@ String address_last = "&wlan_user_ipv6=&wlan_user_mac=145afc035099&wlan_ac_ip=19
 unsigned long lastCheckTime = 0; // 上次检查时间
 const unsigned long checkInterval = 10*60000; // 检查间隔,10后面的单位是分钟
 
-void wifi_connect()          //WIFI连接
+int wifi_connect()          //WIFI连接
 {
 
   //连接WiFi
@@ -56,6 +56,7 @@ void wifi_connect()          //WIFI连接
   else{
     Serial.println("认证失败");
   }
+  return httpCode;
 }
 
 
@@ -73,5 +74,6 @@ void wifi_check(){
     }
   }
 }
+
 
 #endif
