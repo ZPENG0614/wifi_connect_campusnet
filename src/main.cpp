@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-
-
+  void wifi_check();
+  delay(1000);
 }
 
