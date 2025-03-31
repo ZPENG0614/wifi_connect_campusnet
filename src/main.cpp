@@ -6,12 +6,11 @@ void led_blink2();
 
 void setup() {
   Serial.begin(115200);
+  pinMode(led_pin, OUTPUT);
   int check = wifi_connect();
   if(check == HTTP_CODE_OK){//连接成功之后LED双闪验证
     led_blink2();
   }
-  pinMode(led_pin, OUTPUT);
-  led_blink2();
 }
 
 void loop() {
